@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OntologiaLegal="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal"/>
     
 
@@ -375,6 +376,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#AçãoDanosMorais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#AçãoDanosMorais">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Ação"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temMotivo"/>
+                        <owl:hasValue>Danos Morais</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Instância -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Instância"/>
@@ -441,7 +460,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Partes"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temCnpj"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temCpf"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -455,7 +474,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Partes"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temCpf"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temCnpj"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -505,13 +524,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#possuiPartes"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Partes"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#temNumeroProcesso"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -578,6 +597,82 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#AdvogadoJoao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#AdvogadoJoao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Advogado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMateriais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMateriais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Ação"/>
+        <OntologiaLegal:temMotivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danos Materiais</OntologiaLegal:temMotivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMorais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMorais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Ação"/>
+        <OntologiaLegal:temProcesso rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo1"/>
+        <OntologiaLegal:temMotivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danos Morais</OntologiaLegal:temMotivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMorais2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#DanosMorais2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Ação"/>
+        <OntologiaLegal:temProcesso rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo2"/>
+        <OntologiaLegal:temMotivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danos Morais</OntologiaLegal:temMotivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Empresa_X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Empresa_X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#PessoaJuridica"/>
+        <OntologiaLegal:temCnpj rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">123456</OntologiaLegal:temCnpj>
+        <OntologiaLegal:temNome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empresa X Company</OntologiaLegal:temNome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo"/>
+        <OntologiaLegal:temNumeroProcesso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</OntologiaLegal:temNumeroProcesso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/OntologiaLegal#Processo"/>
+        <OntologiaLegal:temNumeroProcesso rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</OntologiaLegal:temNumeroProcesso>
+    </owl:NamedIndividual>
     
 
 
