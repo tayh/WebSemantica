@@ -1,0 +1,609 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#iniciaAcao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#iniciaAcao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiAdvogado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiAdvogado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Advogado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiPartes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiPartes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiAcordao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiAcordao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#OrgaoColegiado"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiSentença -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiSentença">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Juiz"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temAcordao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temAcordao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#SegundaInstancia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temInstancia -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temInstancia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temJuiz -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temJuiz">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Juiz"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOrgaoColegiado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOrgaoColegiado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#OrgaoColegiado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temPetiçãoInicial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temPetiçãoInicial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PrimeiraInstancia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PeticaoInicial"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temProcesso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temProcesso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temSentença -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temSentença">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PrimeiraInstancia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temArgumentos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temArgumentos">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temArgumentosIniciais -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temArgumentosIniciais">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCnpj -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCnpj">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCpf -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCpf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temDecisao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temDecisao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temEmenta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temEmenta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMatricula -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMatricula">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMotivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMotivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNomeTribunal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNomeTribunal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroAcordao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroAcordao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroPeticao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroPeticao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroProcesso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroProcesso">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroSentenca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroSentenca">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOAB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOAB">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temResolucao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temResolucao">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temVoto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temVoto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temDecisao"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temEmenta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroAcordao"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temVoto"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Advogado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Advogado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOAB"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNome"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temProcesso"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMotivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Juiz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Juiz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiSentença"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temMatricula"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#OrgaoColegiado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#OrgaoColegiado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#proferiAcordao"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#iniciaAcao"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiAdvogado"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Advogado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PessoaFisica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PessoaFisica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCnpj"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PessoaJuridica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PessoaJuridica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temCpf"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PeticaoInicial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PeticaoInicial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroPeticao"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PrimeiraInstancia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PrimeiraInstancia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temPetiçãoInicial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PeticaoInicial"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temSentença"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#possuiPartes"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Partes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#SegundaInstancia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#SegundaInstancia">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temAcordao"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temNumeroSentenca"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temResolucao"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temInstancia"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temJuiz"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Juiz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#temOrgaoColegiado"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#OrgaoColegiado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Acordao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#PeticaoInicial"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Sentenca"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Agentes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Ação"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Instância"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Processo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tayh/ontologies/2021/3/untitled-ontology-13#Tribunal"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
