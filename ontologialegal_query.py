@@ -2,7 +2,16 @@ from owlready2 import *
 
 onto = get_ontology("OntologiaLegal.owl").load()
 
-query_string = "SELECT ?s ?p ?o  WHERE {?s ?p ?o .}"
+sync_reasoner()
+
+query_string = """
+SELECT DISTINCT ?acao 
+WHERE {
+    ?acao rdf:type ?type .
+    ?type rdfs:subClassOf* OntologiaLegal:AçãoDanosMorais .
+    ?acao OntologiaLegal:temMotivo ?m .
+}
+"""
 
 a = list(default_world.sparql(query_string))
 
