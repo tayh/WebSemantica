@@ -19,7 +19,7 @@ onto = get_ontology("OntologiaLegal.owl").load()
 
 add_selectbox = st.sidebar.selectbox(
     "OntologiaLegal",
-    ("Sobre a ontologia", "Ações", "Processos")
+    ("Sobre a ontologia", "Ações", "Processos", "Inserir processos")
 )
 
 
@@ -116,3 +116,33 @@ elif add_selectbox == 'Processos':
         st.text('Motivo:')
         st.markdown(m)
         st.text('---------------------------------------------')
+elif add_selectbox == 'Inserir processos':
+    st.header('Inserir Processo')
+
+    with onto:
+        class Processo(Thing):
+            pass
+
+        class Ação(Thing):
+            pass
+
+    with st.form("processos"):
+        processo_numero = st.text_input('Número do processo')
+        processo_nome = 'Processo' + processo_numero
+        motivo = st.text_input('Motivo da ação')
+        motivo_nome = motivo + processo_numero
+        submitted = st.form_submit_button("Inserir")
+
+        if submitted:       
+            processo = Processo(processo_nome)
+            acao = Ação(motivo_nome)
+
+            acao.temProcesso.append(processo)
+            acao.temMotivo.append(motivo)
+
+            st.text('Processo inserido')
+
+            #onto.save(file="OntologiaLegal.owl", format="ntriples")
+
+
+
